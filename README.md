@@ -15,30 +15,30 @@
   
 ### Installation
 
-1. **_Clone the repository_**
+1. Clone the repository
 
 ```sh
 $ git clone https://github.com/AbdallahHemdan/LZ77-compression-algorithm.git
 ```
-2. **_Navigate to repository directory_**
+2. Navigate to repository directory
 ```sh
 $ cd LZ77-compression-algorithm
 ```
 
 ### Running
 
-1. **Run encoding file**
+1. Run encoding file
 ```sh
 $ python ./encoding.py
 ```
-2. **Enter Sliding window size**
+2. Enter Sliding window size
 
-3. **Enter look ahead window size**
+3. Enter look ahead window size
 
-4. **Run decoding file**
+4. Run decoding file
 ```sh
 $ python ./decoding.py
 ```
-5. **Look at out.jpg in the repository folder**
+5. Look at out.jpg in the repository folder
 
 ![image](https://user-images.githubusercontent.com/40190772/80767555-7c726780-8b48-11ea-87b0-a389b486698f.png)
