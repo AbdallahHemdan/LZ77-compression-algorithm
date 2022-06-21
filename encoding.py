@@ -1,14 +1,16 @@
 import numpy as np
 import cv2
 
-inputImg = cv2.imread('input.jpg', 0)
+inputImg = cv2.imread('input.jpg')
 flat = np.array(inputImg).flatten()
 cv2.imshow('input', inputImg)
 
 # size of the image(row, col)
 row = inputImg.shape[0]
 col = inputImg.shape[1]
-flattenSize = row * col
+# number of image channels
+ch = inputImg.shape[2]
+flattenSize = row * col * ch
 
 # get sliding window and look ahead window sizes
 slidingWindow = int(input('1. Enter the sliding window size: '))
@@ -81,6 +83,7 @@ np.save('encodedChars', encodedChar)
 imgSize = open('imgSize.txt', "w")
 imgSize.write(str(row) + '\n')  # write row dimension
 imgSize.write(str(col) + '\n')  # write col dimension
+imgSize.write(str(ch) + '\n')   # write channel dimension
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

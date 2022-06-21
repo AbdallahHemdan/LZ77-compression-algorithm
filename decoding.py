@@ -4,7 +4,8 @@ import numpy as np
 imgSize = open('imgSize.txt', "r")
 row = int(imgSize.readline())
 col = int(imgSize.readline())
-flattenSize = row * col
+ch = int(imgSize.readline())
+flattenSize = row * col * ch
 
 tupleIt = 0
 charIt = 0
@@ -33,6 +34,6 @@ while tupleIt < encodedTuples.size:
 
 for i in range(decodedRes.size, flattenSize):
     decodedRes = np.append(decodedRes, 0)
-decodedRes = np.reshape(decodedRes, (row, col))
+decodedRes = np.reshape(decodedRes, (row, col, ch))
 cv2.imshow('output', decodedRes)
 cv2.imwrite('output.jpg', decodedRes)
